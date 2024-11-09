@@ -29,23 +29,30 @@ Essa tela oferece uma visão rápida das ofertas e mercados próximos, focada na
 
 ## 6.2. Telas do processo 1
 
-_Descrição da tela relativa à atividade 1._
+### **Tela de Cadastro**
+
+Cadastro de Usuário
+
+Campos: Nome, CPF, E-mail e Senha.
+Botão Cadastrar para concluir o cadastro pessoal.
+
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/3a5315f9-6c0d-4cfe-8070-ebbfd9c8f152">
 
 
-_Descrição da tela relativa à atividade 2._
 
-[`Tela da atividade 2`](images/)
 
 
 ## 6.3. Telas do processo 2
 
-_Descrição da tela relativa à atividade 1._
+### **Tela de Cadastro**
 
-[`Tela da atividade 1`](images/)
+**Cadastro de Parceiro**
 
-_Descrição da tela relativa à atividade 2._
+Campos: Razão Social, Nome, CNPJ, Endereço, E-mail, Senha e Tipo (para identificar o tipo de parceiro).
+Botão Cadastrar para finalizar o cadastro de parceiros.
 
-[`Tela da atividade 2`](images/)
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/ceb6bccc-cf4b-49fe-89e2-cf7919ff69c4">
+
 
 
 #### 4.3.3 Modelo Físico
