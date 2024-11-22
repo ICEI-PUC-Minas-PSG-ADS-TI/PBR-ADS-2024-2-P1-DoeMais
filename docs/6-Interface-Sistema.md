@@ -3,11 +3,49 @@
 
 <span style="color:red">Pré-requisitos: <a href="4-Projeto-Solucao.md"> Projeto da Solução</a></span>
 
-_Visão geral da interação do usuário por meio das telas do sistema. Apresente as principais interfaces da plataforma._
+Com base nas imagens fornecidas, é possível identificar as seguintes interfaces principais da plataforma e sua interação com o usuário:
+
+1. Tela de Cadastro de Parceiros:
+
+• Destinada ao registro de empresas parceiras.
+
+• Contém campos como Razão Social, Nome, CNPJ, E-mail, Tipo, Endereço e Senha.
+
+• Botão “Cadastrar” ao final para confirmar o registro.
+
+2. Tela de Cadastro de Usuário:
+
+• Voltada para o cadastro de usuários gerais.
+
+• Campos incluem Nome, CPF, E-mail e Senha.
+
+• Também apresenta o botão “Cadastrar” para finalização.
+
+3. Tela de Lista de Estabelecimentos:
+
+• Interface de busca e exibição de estabelecimentos cadastrados.
+
+• Apresenta cartões com o nome e endereço dos estabelecimentos, além de um ícone de cesta de compras.
+
+• Barra de pesquisa para localizar estabelecimentos.
+
+• Menu superior com opções como “Início”, “Ajuda”, “Pedidos” e “Perfil”.
+
+
+
+Resumo da Interação do Usuário:
+
+
+
+• O sistema organiza os cadastros em diferentes categorias, como “Parceiros” e “Usuários”.
+
+• A interface é minimalista e direta, com elementos visuais simples e fáceis de entender.
+
+• O usuário pode navegar entre as telas para registrar informações ou buscar estabelecimentos de forma intuitiva.
 
 ## 6.1. Tela principal do sistema
 
-_Descrição da tela principal do sistema._
+
 ### **Tela Principal:  Mercados Próximos**
 
 1. **Cabeçalho e Navegação**
