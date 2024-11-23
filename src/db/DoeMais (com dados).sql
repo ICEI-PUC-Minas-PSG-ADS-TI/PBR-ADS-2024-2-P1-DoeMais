@@ -66,7 +66,7 @@ CREATE TABLE `parceiro` (
   `razaoSocial` varchar(45) DEFAULT NULL,
   `ativo` tinyint DEFAULT '0',
   PRIMARY KEY (`idParceiro`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `parceiro` (
 
 LOCK TABLES `parceiro` WRITE;
 /*!40000 ALTER TABLE `parceiro` DISABLE KEYS */;
-INSERT INTO `parceiro` VALUES (1,'Parceiro A','12345678000101','parceiroa@example.com','senha123','Tipo A','Endereço A','Razão A',1),(2,'Parceiro B','23456789000102','parceirob@example.com','senha123','Tipo B','Endereço B','Razão B',1),(3,'Parceiro C','34567890000103','parceiroc@example.com','senha123','Tipo C','Endereço C','Razão C',1),(6,'Parceiro F','67890000000106','parceirof@example.com','senha123','Tipo F','Endereço F','Razão F',1);
+INSERT INTO `parceiro` VALUES (1,'Parceiro A','12345678000101','parceiroa@example.com','senha123','Tipo A','Endereço A','Razão A',1),(2,'Parceiro B','23456789000102','parceirob@example.com','senha123','Tipo B','Endereço B','Razão B',1),(3,'Parceiro C','34567890000103','parceiroc@example.com','senha123','Tipo C','Endereço C','Razão C',1),(6,'Parceiro F','67890000000106','parceirof@example.com','senha123','Tipo F','Endereço F','Razão F',1),(7,'Parceiro G','78900000000107','parceirog@example.com','senha123','Tipo G','Endereço G','Razão G',1),(8,'Parceiro H','89000000000108','parceiroh@example.com','senha123','Tipo H','Endereço H','Razão H',1);
 /*!40000 ALTER TABLE `parceiro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,7 +98,7 @@ CREATE TABLE `pedidodoacao` (
   KEY `fk_pedidoDoacao_parceiro1_idx` (`parceiro_idParceiro`),
   CONSTRAINT `fk_pedidoDoacao_parceiro1` FOREIGN KEY (`parceiro_idParceiro`) REFERENCES `parceiro` (`idParceiro`),
   CONSTRAINT `fk_pedidoDoacao_usuario1` FOREIGN KEY (`usuario_idusuario`) REFERENCES `usuario` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,7 +107,7 @@ CREATE TABLE `pedidodoacao` (
 
 LOCK TABLES `pedidodoacao` WRITE;
 /*!40000 ALTER TABLE `pedidodoacao` DISABLE KEYS */;
-INSERT INTO `pedidodoacao` VALUES (1,1,1,'2023-01-01','2023-01-02','2023-01-05'),(2,2,2,'2023-01-03','2023-01-04',NULL),(3,3,3,'2023-01-05','2023-01-06','2023-01-10');
+INSERT INTO `pedidodoacao` VALUES (1,1,1,'2023-01-01','2023-01-02','2023-01-05'),(2,2,2,'2023-01-03','2023-01-04',NULL),(3,3,3,'2023-01-05','2023-01-06','2023-01-10'),(9,10,1,'2024-01-05','2024-01-06','2024-01-10'),(10,10,1,'2024-02-10','2024-02-11','2024-02-15'),(11,11,2,'2024-03-15','2024-03-16','2024-03-20'),(12,12,2,'2024-04-20','2024-04-21','2024-04-25'),(13,13,3,'2024-05-25','2024-05-26','2024-05-30'),(14,1,3,'2024-06-01','2024-06-02','2024-06-05'),(15,2,2,'2024-07-05','2024-07-06','2024-07-10'),(16,3,3,'2024-08-10','2024-08-11','2024-08-15'),(17,4,7,'2024-09-15','2024-09-16','2024-09-20'),(18,5,7,'2024-10-20','2024-10-21','2024-10-25'),(19,10,6,'2024-11-25','2024-11-26','2024-11-30'),(20,11,6,'2024-12-01','2024-12-02','2024-12-05'),(21,13,7,'2024-01-11','2024-01-12','2024-01-16'),(22,14,7,'2024-02-16','2024-02-17','2024-02-21'),(23,10,8,'2024-03-21','2024-03-22','2024-03-26'),(24,11,8,'2024-04-26','2024-04-27','2024-05-01');
 /*!40000 ALTER TABLE `pedidodoacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,7 +126,7 @@ CREATE TABLE `sacola` (
   PRIMARY KEY (`idSacolaDoacao`),
   KEY `fk_sacolaDoacao_parceiro1_idx` (`parceiro_idParceiro`),
   CONSTRAINT `fk_sacolaDoacao_parceiro1` FOREIGN KEY (`parceiro_idParceiro`) REFERENCES `parceiro` (`idParceiro`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +135,7 @@ CREATE TABLE `sacola` (
 
 LOCK TABLES `sacola` WRITE;
 /*!40000 ALTER TABLE `sacola` DISABLE KEYS */;
-INSERT INTO `sacola` VALUES (1,'Descrição Sacola A','Sacola A',1),(2,'Descrição Sacola B','Sacola B',2),(3,'Descrição Sacola C','Sacola C',3),(6,'Descrição Sacola F','Sacola F',6);
+INSERT INTO `sacola` VALUES (1,'Descrição Sacola A','Sacola A',1),(2,'Descrição Sacola B','Sacola B',2),(3,'Descrição Sacola C','Sacola C',3),(6,'Descrição Sacola F','Sacola F',6),(7,'Descrição Sacola G','Sacola G',1),(8,'Descrição Sacola H','Sacola H',2),(9,'Descrição Sacola I','Sacola I',3),(10,'Descrição Sacola J','Sacola J',2),(11,'Descrição Sacola K','Sacola K',8),(12,'Descrição Sacola L','Sacola L',6),(13,'Descrição Sacola M','Sacola M',7),(14,'Descrição Sacola N','Sacola N',8);
 /*!40000 ALTER TABLE `sacola` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,7 +163,7 @@ CREATE TABLE `sacolapedido` (
 
 LOCK TABLES `sacolapedido` WRITE;
 /*!40000 ALTER TABLE `sacolapedido` DISABLE KEYS */;
-INSERT INTO `sacolapedido` VALUES (1,1),(2,2),(3,3);
+INSERT INTO `sacolapedido` VALUES (1,1),(2,2),(3,3),(9,7),(10,7),(11,8),(12,8),(13,9),(14,9),(15,10),(16,10),(17,11),(18,11),(19,12),(20,12),(21,13),(22,13),(23,14),(24,14);
 /*!40000 ALTER TABLE `sacolapedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `usuario` (
   `senha` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idusuario`),
   UNIQUE KEY `cpf_UNIQUE` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Alice Silva','12345678901','alice@example.com','senha123'),(2,'Bruno Souza','23456789012','bruno@example.com','senha123'),(3,'Carla Dias','34567890123','carla@example.com','senha123'),(4,'Daniel Costa','45678901234','daniel@example.com','senha123'),(5,'Elisa Moreira','56789012345','elisa@example.com','senha123'),(10,'Inês Ferreira','90123456789','ines@example.com','senha123'),(11,'João Almeida','01234567890','joao@example.com','senha123');
+INSERT INTO `usuario` VALUES (1,'Alice Silva','12345678901','alice@example.com','senha123'),(2,'Bruno Souza','23456789012','bruno@example.com','senha123'),(3,'Carla Dias','34567890123','carla@example.com','senha123'),(4,'Daniel Costa','45678901234','daniel@example.com','senha123'),(5,'Elisa Moreira','56789012345','elisa@example.com','senha123'),(10,'Inês Ferreira','90123456789','ines@example.com','senha123'),(11,'João Almeida','01234567890','joao@example.com','senha123'),(12,'Lucas Martins','22222222222','lucas@example.com','senha123'),(13,'Marta Oliveira','33333333333','marta@example.com','senha123'),(14,'Karla Ribeiro','11111111111','karla@example.com','senha123');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -233,4 +233,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-22 19:48:37
+-- Dump completed on 2024-11-22 22:50:27
